@@ -1,0 +1,21 @@
+{% extends 'portal/shapka.html' %}
+
+<body background="2.jpg">
+
+{% block title %}
+{{ competition.title  }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="card border-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-primary">{{ competition.title }}</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{ competition.body }}</h5>
+    <p class="card-text">Общий счет матча {{ competition.t_s }}. Счет по партиям соответственно {{ competition.p_a }}.</p>
+  </div>
+  <div class="card-footer bg-transparent border-primary">{{ competition.date }}</div>
+</div>
+
+{% endblock %}
+
+</body>
